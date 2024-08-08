@@ -4,8 +4,8 @@ def normalize_phone(phone_number):
     sanitar_number = re.sub("[^0-9]", "", phone_number)
     if not sanitar_number.startswith('38'):
         sanitar_number = '+38' + sanitar_number
-    if len(sanitar_number) <= 13 or not sanitar_number.isdigit():
-        phone_number = 'Invalid Number'
+    else:
+        sanitar_number = '+' + sanitar_number
     return sanitar_number
 raw_numbers = [
     "067\\t123 4567",
